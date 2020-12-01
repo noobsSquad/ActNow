@@ -1,0 +1,7 @@
+{
+  "name": "ActNow",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
