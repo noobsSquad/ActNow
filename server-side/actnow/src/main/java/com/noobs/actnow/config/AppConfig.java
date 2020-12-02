@@ -13,6 +13,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 @Configuration
 public class AppConfig implements WebMvcConfigurer {
 
+    //enable device resolution before handle requests
     @Bean
     public DeviceResolverHandlerInterceptor deviceResolverHandlerInterceptor() { 
         return new DeviceResolverHandlerInterceptor(); 
@@ -32,7 +33,4 @@ public class AppConfig implements WebMvcConfigurer {
     public void addArgumentResolvers(List<HandlerMethodArgumentResolver> argumentResolvers) {
         argumentResolvers.add(deviceHandlerMethodArgumentResolver()); 
     }
-   
-    
-
 }
