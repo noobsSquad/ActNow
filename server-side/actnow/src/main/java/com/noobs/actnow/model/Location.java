@@ -2,10 +2,15 @@ package com.noobs.actnow.model;
 
 import org.springframework.data.annotation.Id;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
 public class Location {
 
     @Id
-    private Long id;
+    private String id;
 
     private String address;
 
