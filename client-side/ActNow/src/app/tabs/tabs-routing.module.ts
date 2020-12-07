@@ -9,34 +9,30 @@ const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
-      },
-      {
-        path: 'search',
-        loadChildren: () => import('../search/search.module').then(m => m.SearchPageModule)
+        loadChildren: () => import('../pages/home/home.module').then(m => m.HomePageModule)
       },
       {
         path: 'news',
-        loadChildren: () => import('../news/news.module').then(m => m.NewsPageModule)
+        loadChildren: () => import('../pages/news/news.module').then(m => m.NewsPageModule)
       },
       {
         path: 'location',
-        loadChildren: () => import('../location/location.module').then(m => m.LocationPageModule)
+        loadChildren: () => import('../pages/location/location.module').then(m => m.LocationPageModule)
       },
       {
         path: 'about-us',
-        loadChildren: () => import('../about-us/about-us.module').then(m => m.AboutUsPageModule)
+        loadChildren: () => import('../pages/about-us/about-us.module').then(m => m.AboutUsPageModule)
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/home',
         pathMatch: 'full'
       }
     ]
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/home',
     pathMatch: 'full'
   }
 ];

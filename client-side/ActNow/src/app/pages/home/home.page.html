@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" *ngIf="!danger">
+  <h2>Information Sheet</h2>
+  <ion-virtual-scroll [items]="emergencyInfoList" approxItemHeight="320px">
+    <ion-button fill="clear" slot="start" *virtualItem="let emergencyInfo" (click)="presentModal(emergencyInfo)">
+      
+      {{ emergencyInfo }}
+    </ion-button>
+  </ion-virtual-scroll>
+
+  <h2>Other Information</h2>
+  <ion-button color="clear">Warning Labels</ion-button>
+  <ion-button color="danger">See World Covid Data</ion-button>
+</ion-content>
