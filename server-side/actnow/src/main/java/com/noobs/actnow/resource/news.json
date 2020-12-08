@@ -1,0 +1,346 @@
+{
+    "_type": "News",
+    "webSearchUrl": "https://www.bing.com/news/search?q=health+news&form=TNSA02",
+    "value": [
+        {
+            "name": "Coronavirus in Illinois updates: Here’s what happened Dec. 3 with COVID-19 in the Chicago area",
+            "url": "https://www.chicagotribune.com/coronavirus/ct-covid-19-pandemic-chicago-illinois-news-20201203-dn43dw52zvcgxeymgvgmkle73u-story.html",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.9lG7ly-Ohk37o91il6kw8S&pid=News",
+                    "width": 700,
+                    "height": 364
+                }
+            },
+            "description": "Illinois health officials reported 10,959 new confirmed and probable cases of COVID-19 and 192 additional fatalities on Thursday, bringing the total number of known infections in Illinois to 759,562 since the start of the pandemic.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/4131acb8-628a-4241-8920-ca79eab9dade",
+                    "name": "Illinois"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/cfc9b1ed-19e9-354d-2205-b72b7950a051",
+                    "name": "Chicago metropolitan area"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "Chicago Tribune",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_1a394543d55bdec61d7b3d912e808886&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-05T01:23:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.chicagotribune.com/coronavirus/ct-covid-19-pandemic-chicago-illinois-news-20201203-dn43dw52zvcgxeymgvgmkle73u-story.html?outputType=amp"
+        },
+        {
+            "name": "Dr. Fauci's 18-hour workday includes two breaks and answering 'emails until I'm so tired I can't do anymore'",
+            "url": "https://www.cnbc.com/2020/12/04/dr-faucis-daily-routine-and-work-schedule-during-the-covid-pandemic.html",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.h7Pyj2guxFUY9lnET7VQPy&pid=News",
+                    "width": 700,
+                    "height": 443
+                }
+            },
+            "description": "Dr. Anthony Fauci's 18-hour workday includes several Zoom meetings, interviews and a power walk in the evening.",
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "CNBC",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_4efc5b36002beed4d9e08a53512d7e9e&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-05T01:10:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.cnbc.com/amp/2020/12/04/dr-faucis-daily-routine-and-work-schedule-during-the-covid-pandemic.html"
+        },
+        {
+            "name": "The Latest: Conn. extends pandemic jobless benefit to 38,000",
+            "url": "https://www.sfgate.com/news/article/The-Latest-Fauci-apologizes-for-saying-UK-rushed-15775285.php",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.Zo9mDL7Hxa2H-dud3GOlui&pid=News",
+                    "width": 700,
+                    "height": 466
+                }
+            },
+            "description": "Connecticut Gov. Ned Lamont has signed an order allowing the state Department of Labor to expand eligibility for a federal pandemic unemployment program to an estimated 38,000 people who were previously disqualified.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/b3ca6523-435e-4a3b-8f78-1ad900a52cf8",
+                    "name": "Connecticut"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/3bd5f7db-c521-3212-3e05-326798479c94",
+                    "name": "Benefit"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "SFGate",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_54d6e8857a180186fb2098ccfbefbf4b&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-05T00:56:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.sfgate.com/news/amp/The-Latest-Fauci-apologizes-for-saying-UK-rushed-15775285.php"
+        },
+        {
+            "name": "School superintendents told to plan for vaccine distribution",
+            "url": "https://www.sfgate.com/news/article/School-superintendents-told-to-plan-for-vaccine-15777429.php",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.USH6954nf-S__sMM8ZfBgC&pid=News",
+                    "width": 700,
+                    "height": 466
+                }
+            },
+            "description": "Kentucky's governor called on school superintendents Friday to begin planning for the eventual distribution of coronavirus vaccines to their employees. The latest development in the state's plans to allocate the vaccine came as Gov.",
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "SFGate",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_54d6e8857a180186fb2098ccfbefbf4b&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-05T00:50:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.sfgate.com/news/amp/School-superintendents-told-to-plan-for-vaccine-15777429.php"
+        },
+        {
+            "name": "WHO warns Covid reinfections may occur as data suggests antibodies wane",
+            "url": "https://www.cnbc.com/2020/12/04/who-warns-covid-reinfections-may-occur-as-data-suggests-antibodies-wane.html",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.a_zoPUCrH3sEbWYamunxti&pid=News",
+                    "width": 700,
+                    "height": 478
+                }
+            },
+            "description": "World Health Organization officials on Friday warned that recent data suggests people who were once infected with the coronavirus could be infected again.",
+            "mentions": [
+                {
+                    "name": "United States Centers for Disease Control and Prevention"
+                },
+                {
+                    "name": "Cryptocurrency"
+                },
+                {
+                    "name": "United States"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "CNBC",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_4efc5b36002beed4d9e08a53512d7e9e&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-05T00:40:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.cnbc.com/amp/2020/12/04/who-warns-covid-reinfections-may-occur-as-data-suggests-antibodies-wane.html"
+        },
+        {
+            "name": "Texas brings nursing home residents to front of vaccine line",
+            "url": "https://www.chron.com/news/article/Texas-brings-nursing-home-residents-to-front-of-15777373.php",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.DfP-jstc3SS6qs1X8JJ6PC&pid=News",
+                    "width": 700,
+                    "height": 418
+                }
+            },
+            "description": "Texas health officials Friday moved nursing home residents to the front of the line for coronavirus vaccines after initially deciding that only health care workers would have access to the first round of doses that are expected to arrive this month.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/00a23ccd-3344-461c-8b9f-c2bb55be5815",
+                    "name": "Texas"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "Houston Chronicle",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_498b7ec640fbc692daf9710f9dda1ae0&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-04T23:58:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.chron.com/news/amp/Texas-brings-nursing-home-residents-to-front-of-15777373.php"
+        },
+        {
+            "name": "The Latest: Alabama Health Officials Ask for Mask Extension",
+            "url": "https://www.usnews.com/news/world/articles/2020-12-04/the-latest-fauci-apologizes-for-saying-uk-rushed-vaccine",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.rGNVF9PTzkkYfywF50d9ny&pid=News",
+                    "width": 700,
+                    "height": 466
+                }
+            },
+            "description": "Alabama health officials have urged the state Friday to extend its statewide mask mandate, set to expire next week.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/6b0b080e-86d8-5688-c964-c75af95b6ef5",
+                    "name": "U.S. News & World Report"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/376f8b06-52f6-4e72-a31d-311a3563e645",
+                    "name": "Alabama"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/17d29690-e063-1d05-d9ff-fac9b501d7e3",
+                    "name": "Official"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "U.S. News & World Report",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_9f4e7717a371a0a5e2bbf48b4ca76ed5&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-04T23:56:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.usnews.com/news/world/articles/2020-12-04/the-latest-fauci-apologizes-for-saying-uk-rushed-vaccine?context=amp"
+        },
+        {
+            "name": "The Latest: FBI urges retests for people tested at NJ lab",
+            "url": "https://www.chron.com/news/article/The-Latest-Fauci-apologizes-for-saying-UK-rushed-15775285.php",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.W8QJ6RkyQ6iuWXvJ5LBEFS&pid=News",
+                    "width": 700,
+                    "height": 466
+                }
+            },
+            "description": "The FBI is telling anyone who underwent a coronavirus test at a New Jersey laboratory to get retested and to contact the agency. In a statement Friday on Twitter, the FBI’s Newark office urges people who were recently tested for the virus at Infinity Diagnostic Laboratory in Ventnor “to be retested as soon as possible.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/05277898-b62b-4878-8632-09d29756a2ff",
+                    "name": "New Jersey"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/e470e552-d479-42f9-dff4-a15995402e33",
+                    "name": "Federal Bureau of Investigation"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "Houston Chronicle",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_498b7ec640fbc692daf9710f9dda1ae0&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-04T23:32:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.chron.com/news/amp/The-Latest-Fauci-apologizes-for-saying-UK-rushed-15775285.php"
+        },
+        {
+            "name": "Coronavirus: Orange County reported 1,234 new cases and 17 new deaths as of Dec. 4",
+            "url": "https://www.ocregister.com/2020/12/04/coronavirus-orange-county-reported-1234-new-cases-and-17-new-deaths-as-of-dec-4/",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.nnemrxhWuogcz57uYDQbiy&pid=News",
+                    "width": 700,
+                    "height": 248
+                }
+            },
+            "description": "The Orange County Health Care Agency reported 1,234 new cases of the coronavirus on Friday, Dec. 4, increasing the cumulative total in the county to 82,887 cases. An estimated 13,489 cases have been recorded in the last 14 days.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/47483b51-bcd6-530c-4c8c-53a8bd85ad87",
+                    "name": "Orange County"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "Orange County Register",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_586cb9e455cc0bf3d26760d0d139f3a3&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-04T22:42:00.0000000Z",
+            "category": "Health",
+            "ampUrl": "https://www.ocregister.com/2020/12/04/coronavirus-orange-county-reported-1234-new-cases-and-17-new-deaths-as-of-dec-4/amp/"
+        },
+        {
+            "name": "In MDS, Transplant Ups Survival in Elderly and May Be Reimbursed",
+            "url": "https://www.medscape.com/viewarticle/942069",
+            "image": {
+                "thumbnail": {
+                    "contentUrl": "https://www.bing.com/th?id=OVFT.pJN3ir45b1W2lDT_WSqtCS&pid=News",
+                    "width": 700,
+                    "height": 393
+                }
+            },
+            "description": "Transplants offer a chance for a cure in myelodysplastic syndrome, and are often offered to younger patients; new results show they increase survival in older patients too.",
+            "about": [
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/4b7fc81a-aefd-dbe9-c10b-8a1dc8cb8063",
+                    "name": "Survival!"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/34606ee5-a9f1-99bc-cf87-621e27ef3651",
+                    "name": "Myelodysplastic syndrome"
+                },
+                {
+                    "readLink": "https://api.bing.microsoft.com/api/v7/entities/c36a13ae-59a6-ff32-ae9a-968221c69704",
+                    "name": "Old age"
+                }
+            ],
+            "provider": [
+                {
+                    "_type": "Organization",
+                    "name": "Medscape",
+                    "image": {
+                        "thumbnail": {
+                            "contentUrl": "https://www.bing.com/th?id=AR_fbb82da4c8e47e719997e1630c05befb&pid=news"
+                        }
+                    }
+                }
+            ],
+            "datePublished": "2020-12-04T22:24:00.0000000Z",
+            "category": "Health"
+        }
+    ]
+}
