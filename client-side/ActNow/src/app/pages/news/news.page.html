@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+      <ion-item *ngFor="let news of listNews">
+        <ion-card>
+          <ion-card-title>{{news.title}}</ion-card-title>
+          <ion-thumbnail size="large">
+            <ion-img src="{{news.retrievedImageUrl}}"></ion-img>
+          </ion-thumbnail>
+        
+          <ion-card-header>
+            <ion-card-subtitle>{{news.author}}</ion-card-subtitle>
+            <ion-card-subtitle>{{news.datePosted | date:"short" }}</ion-card-subtitle>
+          </ion-card-header>
+        </ion-card>
+      </ion-item>
+    </ion-list>
+
+    <ion-infinite-scroll threshold="100px" (ionInfinite)="loadData($event)" [disabled]="listNews.length <=0">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading more news">
+    </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

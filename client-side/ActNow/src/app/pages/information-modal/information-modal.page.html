@@ -1,0 +1,21 @@
+<ion-content>
+  <ion-item>
+    <ion-button color="light"id="close-button"  size="small" slot="end" (click)="dismiss()">
+      <ion-icon name="close-circle-outline"></ion-icon>
+    </ion-button>
+  </ion-item>
+  <ion-card>
+    <ion-img src="https://cdn.pixabay.com/photo/2015/03/26/10/24/storm-691286_960_720.jpg"></ion-img>
+    <ion-button fill="clear" *ngIf="(information.length > 250)" > To the Bottom</ion-button>
+    <ion-card-header>
+      <ion-card-subtitle>Last Updated: {{lastUpdated}}</ion-card-subtitle>
+      <ion-card-title id="cardTitle">{{title}}</ion-card-title>
+    </ion-card-header>
+    <ion-button slot="end">To The bottom</ion-button>
+    <ion-card-content>
+      {{information}}
+    </ion-card-content>
+    <ion-button fill="clear" *ngIf="(information.length > 250)" > To the Top</ion-button>
+    <ion-card-subtitle id="references">References: </ion-card-subtitle>
+  </ion-card>
+</ion-content>
