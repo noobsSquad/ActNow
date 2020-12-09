@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { ModalPage } from '../information-pages/modal/modal.page';
+import { InformationModalPage } from '../information-modal/information-modal.page';
 
 @Component({
   selector: 'app-home',
@@ -24,7 +24,7 @@ export class HomePage implements OnInit {
     const title = await value;
     console.log(title);
     const modal = await this.modalController.create({
-      component: ModalPage,
+      component: InformationModalPage,
       componentProps:{
         'title': title,
         "information": "Hurricanes are not just a coastal problem. Find out how rain, wind, water could happen where you live so you can start preparing now. ",
