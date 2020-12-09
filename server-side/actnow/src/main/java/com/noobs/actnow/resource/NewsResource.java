@@ -2,25 +2,19 @@ package com.noobs.actnow.resource;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.annotation.PropertyAccessor;
-import com.fasterxml.jackson.annotation.JsonAutoDetect.Visibility;
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
-import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
-import com.fasterxml.jackson.module.paramnames.ParameterNamesModule;
-import com.noobs.actnow.model.News;
 
+import com.noobs.actnow.model.dto.News.NewsResponse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.configurationprocessor.json.JSONObject;
+
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
 
-import jdk.nashorn.internal.parser.JSONParser;
+import lombok.AllArgsConstructor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -30,8 +24,11 @@ import okhttp3.Response;
 @RequestMapping("/api/news")
 public class NewsResource {
 
-    @Autowired
     private OkHttpClient client;
+
+    private RestTemplate restTemplate;
+
+    private ObjectMapper mapper;
 
     @Value("${api.key}")
     String apiKey;
@@ -42,17 +39,19 @@ public class NewsResource {
     private final String SCIENCEPARAM = "&category=science";
 
     @GetMapping(path = "/health", produces =  {MediaType.APPLICATION_JSON_VALUE})
-    public String getHealthNews() {
+    public NewsResponse getHealthNews() throws IOException {
         
         Request request = new Request.Builder()
                 .url(BASE_URL + MARKETCODE + HEALTHPARAM)
                 .addHeader("Ocp-Apim-Subscription-Key", apiKey)
                 .build();
 
+        NewsResponse resp = null;
+
         try(Response response = client.newCall(request).execute()) {
-            //ObjectMapper objectMapper = new ObjectMapper();
+            String result = restTemplate.getForObject(BASE_URL + MARKETCODE + HEALTHPARAM, String.class);
+            resp = mapper.readValue(result, NewsResponse.class);
             //JSONParser parser = new JSONP
-            // JSONObject json = new JSONObject();
             // json.getString(response.body().string());
             //  objectMapper.registerModule(new ParameterNamesModule());
             // objectMapper.setVisibility(PropertyAccessor.ALL, Visibility.NONE);
@@ -61,22 +60,28 @@ public class NewsResource {
             //String streamOfNews = objectMapper.writeValueAsString(new News());
             //News[] newsEntity = objectMapper.readValue(response.body().string(), News[].class);
             //return newsEntity.toString();
-        } catch (IOException e) {
-           return e.getMessage();
+        } catch (Exception e) {
+           throw new IOException(e.getLocalizedMessage());
         }
+        return resp;     
     }
 
     @GetMapping(path = "/science", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public String getScienceNews() {
+    public NewsResponse getScienceNews() throws IOException {
         Request request = new Request.Builder()
             .url(BASE_URL + MARKETCODE + SCIENCEPARAM)
             .addHeader("Ocp-Apim-Subscription-Key", apiKey)
             .build();
         
+        NewsResponse resp = null;
+
         try(Response response = client.newCall(request).execute()) {
-            return response.body().string();
-        } catch(IOException e) {
-            return e.getMessage();
+            String result = restTemplate.getForObject(BASE_URL + MARKETCODE + HEALTHPARAM, String.class);
+            resp = mapper.readValue(result, NewsResponse.class);
+        } catch(Exception e) {
+            throw new IOException();
         }
+
+        return resp;
     }
 }

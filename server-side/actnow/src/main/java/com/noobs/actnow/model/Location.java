@@ -23,4 +23,5 @@ public class Location {
     private Float latitude;
 
     private Float longitude;
+    
 }
