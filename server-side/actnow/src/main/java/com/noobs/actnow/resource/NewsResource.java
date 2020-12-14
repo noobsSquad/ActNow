@@ -2,33 +2,27 @@ package com.noobs.actnow.resource;
 
 import java.io.IOException;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 
-import com.noobs.actnow.model.dto.News.NewsResponse;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.client.RestTemplate;
 
-import lombok.AllArgsConstructor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-
 
 @RestController
 @RequestMapping("/api/news")
 public class NewsResource {
 
+    @Autowired
     private OkHttpClient client;
-
-    private RestTemplate restTemplate;
-
-    private ObjectMapper mapper;
 
     @Value("${api.key}")
     String apiKey;
@@ -38,50 +32,44 @@ public class NewsResource {
     private final String HEALTHPARAM = "&category=health";
     private final String SCIENCEPARAM = "&category=science";
 
-    @GetMapping(path = "/health", produces =  {MediaType.APPLICATION_JSON_VALUE})
-    public NewsResponse getHealthNews() throws IOException {
-        
-        Request request = new Request.Builder()
-                .url(BASE_URL + MARKETCODE + HEALTHPARAM)
-                .addHeader("Ocp-Apim-Subscription-Key", apiKey)
-                .build();
+    @GetMapping(path = "/health", produces = { MediaType.APPLICATION_JSON_VALUE })
+    public String getHealthNews() throws IOException {
 
-        NewsResponse resp = null;
+        // setup code request
+        // URL
+        // ApiKey
+        Request request = new Request.Builder().url(BASE_URL + MARKETCODE + HEALTHPARAM)
+                .addHeader("Ocp-Apim-Subscription-Key", apiKey).build();
 
-        try(Response response = client.newCall(request).execute()) {
-            String result = restTemplate.getForObject(BASE_URL + MARKETCODE + HEALTHPARAM, String.class);
-            resp = mapper.readValue(result, NewsResponse.class);
-            //JSONParser parser = new JSONP
-            // json.getString(response.body().string());
-            //  objectMapper.registerModule(new ParameterNamesModule());
-            // objectMapper.setVisibility(PropertyAccessor.ALL, Visibility.NONE);
-            // objectMapper.setVisibility(PropertyAccessor.FIELD, Visibility.ANY);
-            // objectMapper.setVisibility(PropertyAccessor.CREATOR, Visibility.ANY);
-            //String streamOfNews = objectMapper.writeValueAsString(new News());
-            //News[] newsEntity = objectMapper.readValue(response.body().string(), News[].class);
-            //return newsEntity.toString();
+        // convert body to JSON
+        try {
+            Response response = client.newCall(request).execute();
+            String body = response.body().string();
+            com.google.gson.JsonParser parser = new com.google.gson.JsonParser();
+            JsonObject json = parser.parse(body).getAsJsonObject();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            return gson.toJson(json);    
         } catch (Exception e) {
            throw new IOException(e.getLocalizedMessage());
-        }
-        return resp;     
+        }     
     }
 
     @GetMapping(path = "/science", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public NewsResponse getScienceNews() throws IOException {
+    public String getScienceNews() throws IOException {
         Request request = new Request.Builder()
             .url(BASE_URL + MARKETCODE + SCIENCEPARAM)
             .addHeader("Ocp-Apim-Subscription-Key", apiKey)
             .build();
-        
-        NewsResponse resp = null;
-
-        try(Response response = client.newCall(request).execute()) {
-            String result = restTemplate.getForObject(BASE_URL + MARKETCODE + HEALTHPARAM, String.class);
-            resp = mapper.readValue(result, NewsResponse.class);
+    
+        try {
+            Response response = client.newCall(request).execute();
+            String body = response.body().string();
+            com.google.gson.JsonParser parser = new com.google.gson.JsonParser();
+            JsonObject json = parser.parse(body).getAsJsonObject();
+            Gson gson = new GsonBuilder().setPrettyPrinting().create();
+            return gson.toJson(json);
         } catch(Exception e) {
-            throw new IOException();
+            throw new IOException(e.getLocalizedMessage());
         }
-
-        return resp;
     }
 }
